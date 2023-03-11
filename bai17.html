@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar{
+            background-color: green;
+        }
+        .menu > li {
+            display: inline-block;
+            padding: 10px;
+        }
+        .menu li{
+            position: relative;
+            background-color: green;
+            list-style: none;
+            width: 100px;
+        }
+        .menu > li:hover > a{
+            color: orange;
+        }
+        .menu li:hover > .sub-menu{
+            display: block;
+        }
+        .menu a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .sub-menu{
+            position: absolute;
+            top: 32px;
+            left: 0;
+            display: none;
+        }
+        .sub-menu li{
+            width: 110px;
+        }
+        .sub-menu li:hover a{
+            color: orange;
+        }
+        .sub-menu a{
+            display: block;
+            padding: 8px 16px;
+        }
+        .sub-menu .sub-menu{
+            left: 100%;
+            top: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Products</a>
+                <ul class="sub-menu">
+                    <li><a href="">Engineering</a></li>
+                    <li><a href="">Telecom</a></li>
+                    <li><a href="">Energy</a></li>
+                    <li><a href="">Finance</a></li>
+                    <li><a href="">Consultancy</a></li>
+                </ul>
+            </li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>
