@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            font-size: 18px;
+            color: blue;
+            text-shadow: 0 0 2px blue;
+            padding: 8px;
+            text-align: center;
+        }
+        .menu li{
+            background-color: lightskyblue;
+            list-style: none;
+            position: relative;
+            height: 40px;
+            width: 120px;
+            border: 2px dashed #fff;
+            display: block;
+        }
+        .sub-menu{
+            position: absolute;
+            left: 100%;
+            top: 8px;
+            display: none;
+        }
+        .sub-menu > li:nth-child(2){
+            height: 120px;
+        }
+        .sub-menu .sub-menu{
+            position: absolute;
+            left: 100%;
+            top: 8px;
+            display: none;
+        }
+        .menu li:hover .sub-menu{
+            display: block;
+        }
+        .menu li:hover >a{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Products</a>
+                <ul class="sub-menu">
+                    <li><a href="">Photography</a></li>
+                    <li>
+                        <a href="">Web & User</a>
+                        <a href="">Interface</a>
+                        <a href="">Design</a>
+                    </li>
+                    <li><a href="">lllustration</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>
